@@ -1,0 +1,84 @@
+ body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:#141414;
+    color:#333;
+ }
+ /* Nafesa Rahmani */
+h1{
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+h3{  font-size: 28px;
+    line-height: 1.7;
+    color: #555;
+    text-align: center;
+    padding: 5px;
+}
+.custom-input, .custom-btn{
+    width: 250px;
+}
+.custom-image{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    position: absolute;
+    transition:all ease-in-out;
+    z-index: 1;
+}
+.custom-image-container img{
+    max-width: none;
+}
+.custom-image-container{
+    padding-left: 6px;
+    padding-right: 6px;
+    overflow: hidden;
+    height: auto;
+    position: relative;
+}
+section.container{
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    position: relative;
+    height: 450px;
+
+}
+@media (min-width: 768px){
+    .row > .col-md-6 {
+        margin-bottom: 0;
+    }
+}
+/* animation codes */
+@keyframes slideDown{
+    0%{
+        transform:translateY(-100%);
+    }100%{
+    transform: translateY(0);
+}
+   }
+@keyframes slideUp{
+    0%{
+        transform:translateY(100%);
+    }100%{
+    transform: translateY(0);
+}}
+   
+.slide-down{
+    animation:slideDown 12s  infinite;
+}
+.slide-up{
+    animation:slideUp 12s  infinite;
+}
+.custom-image img:nth-child(odd){
+    animation:slideDown 3s infinite;
+}
+.custom-image img:nth-child(even){
+    animation:slideUp 3s infinite;
+}
